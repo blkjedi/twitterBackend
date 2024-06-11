@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 4000;
 app.use(morgan('dev'))
 
 app.use(cors());
-
+app.use(express.json())
 app.use('/tweets', tweetsRouter);
 
 app.get('/', (req, res) => {
